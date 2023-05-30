@@ -10,8 +10,6 @@ import {
 
 const TeamDisplay = ({
   modalIsVisible,
-  teamOneAverageRating,
-  teamTwoAverageRating,
   teamOne,
   teamTwo,
   setModalIsVisible,
@@ -22,9 +20,6 @@ const TeamDisplay = ({
       <Header />
       <View style={styles.container}>
         <ScrollView style={styles.scrollview}>
-          <Text style={styles.text}>
-            Team One: (average rating - {teamOneAverageRating})
-          </Text>
           {teamOne.map((player) => (
             <Text key={player} style={styles.player_text}>
               {player}
@@ -32,9 +27,6 @@ const TeamDisplay = ({
           ))}
           <Text></Text>
           <Text></Text>
-          <Text style={styles.text}>
-            Team Two: (average rating - {teamTwoAverageRating})
-          </Text>
           {teamTwo.map((player) => (
             <Text key={player} style={styles.player_text}>
               {player}

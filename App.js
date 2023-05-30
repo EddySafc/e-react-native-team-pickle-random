@@ -8,17 +8,7 @@ import InputContainer from "./Components/InputContainer";
 import PlayersList from "./Components/PlayersList";
 import ExecuteButtons from "./Components/ExecuteButtons";
 import TeamDisplay from "./Components/TeamDisplay";
-import {
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-  Button,
-  ScrollView,
-  Modal,
-  Pressable,
-  ImageBackground,
-} from "react-native";
+import { StyleSheet, View } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -28,8 +18,6 @@ export default function App() {
   const [teamOne, setTeamOne] = useState([]);
   const [teamTwo, setTeamTwo] = useState([]);
   const [modalIsVisible, setModalIsVisible] = useState(false);
-  const [teamOneAverageRating, setTeamOneAverageRating] = useState(0);
-  const [teamTwoAverageRating, setTeamTwoAverageRating] = useState(0);
 
   return (
     <>
@@ -94,14 +82,10 @@ export default function App() {
                     teamOne={teamOne}
                     setTeamTwo={setTeamTwo}
                     teamTwo={teamTwo}
-                    setTeamOneAverageRating={setTeamOneAverageRating}
-                    setTeamTwoAverageRating={setTeamTwoAverageRating}
                     setModalIsVisible={setModalIsVisible}
                   />
                   <TeamDisplay
                     modalIsVisible={modalIsVisible}
-                    teamOneAverageRating={teamOneAverageRating}
-                    teamTwoAverageRating={teamTwoAverageRating}
                     teamOne={teamOne}
                     teamTwo={teamTwo}
                     setModalIsVisible={setModalIsVisible}

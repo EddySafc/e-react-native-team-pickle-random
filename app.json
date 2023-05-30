@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Team-Pickle",
-    "slug": "Team-Pickle",
+    "name": "Team-Pickle-Random",
+    "slug": "Team-Pickle-Random",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

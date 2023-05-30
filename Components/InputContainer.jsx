@@ -3,30 +3,18 @@ import { useState } from "react";
 
 const InputContainer = ({ setPlayers, players, setDisableGenerateButton }) => {
   const [enteredPlayerText, setEnteredPlayerText] = useState("");
-  const [enteredRatingText, setEnteredRatingText] = useState("");
 
   const playerTextInputHandler = (enteredText) => {
     setEnteredPlayerText(enteredText);
   };
 
-  const ratingTextInputHandler = (enteredText) => {
-    setEnteredRatingText(enteredText);
-  };
-
   const addPlayerButton = () => {
-    if (
-      enteredPlayerText !== "" &&
-      enteredRatingText !== "" &&
-      enteredRatingText <= 10 &&
-      enteredRatingText >= 0 &&
-      players.length < 10
-    ) {
+    if (enteredPlayerText !== "" && players.length < 10) {
       setPlayers((currentPlayers) => [
         ...currentPlayers,
         {
           playerName: enteredPlayerText,
           playerKey: players.length,
-          playerRating: enteredRatingText,
         },
       ]);
 
@@ -34,7 +22,6 @@ const InputContainer = ({ setPlayers, players, setDisableGenerateButton }) => {
         setDisableGenerateButton(false);
       }
       setEnteredPlayerText("");
-      setEnteredRatingText("");
     }
   };
 
@@ -50,12 +37,6 @@ const InputContainer = ({ setPlayers, players, setDisableGenerateButton }) => {
             placeholder="Player name"
             onChangeText={playerTextInputHandler}
             value={enteredPlayerText}
-          />
-          <TextInput
-            style={styles.player_input}
-            placeholder="Player Rating"
-            onChangeText={ratingTextInputHandler}
-            value={enteredRatingText}
           />
         </View>
         <View>
