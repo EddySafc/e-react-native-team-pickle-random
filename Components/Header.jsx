@@ -3,7 +3,7 @@ import { View, StyleSheet, Text } from "react-native";
 const Header = () => {
   return (
     <View style={styles.header}>
-      <Text style={styles.header_text}>Team Pickle</Text>
+      <Text style={styles.header_text}>Team Pickle Random</Text>
     </View>
   );
 };

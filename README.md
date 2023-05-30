@@ -1,6 +1,6 @@
-# Team-Pickle-fe
+# Team-Pickle-Random
 
-A React Native app for selecting even sides for a 5 aside football game.
+A React Native app for selecting random sides for a 5 aside football game.
 
 ## Set-up for self-hosting.
 
