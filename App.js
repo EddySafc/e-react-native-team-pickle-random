@@ -44,7 +44,7 @@ export default function App() {
               },
             }}
             name="Add Player"
-            component={() => (
+            children={() => (
               <InputContainer
                 setDisableGenerateButton={setDisableGenerateButton}
                 setPlayers={setPlayers}
@@ -65,7 +65,7 @@ export default function App() {
               },
             }}
             name="Player List"
-            component={() => {
+            children={() => {
               return (
                 <View style={styles.players_tab}>
                   <PlayersList

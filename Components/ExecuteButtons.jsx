@@ -85,62 +85,13 @@ const ExecuteButtons = ({
           }}
         />
       </View>
-      <Button
-        title="auto"
-        color="blue"
-        onPress={() => {
-          setPlayers([
-            {
-              playerName: "Eddy",
-              playerKey: 1,
-            },
-            {
-              playerName: "Jack",
-              playerKey: 2,
-            },
-            {
-              playerName: "Fraser",
-              playerKey: 3,
-            },
-            {
-              playerName: "Mike",
-              playerKey: 4,
-            },
-            {
-              playerName: "Robin",
-              playerKey: 5,
-            },
-            {
-              playerName: "Alex",
-              playerKey: 6,
-            },
-            {
-              playerName: "Adam",
-              playerKey: 7,
-            },
-            {
-              playerName: "Stu",
-              playerKey: 8,
-            },
-            {
-              playerName: "Kyle",
-              playerKey: 9,
-            },
-            {
-              playerName: "Mark",
-              playerKey: 10,
-            },
-          ]),
-            setDisableGenerateButton(false);
-        }}
-      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   bottom_buttons: { flexDirection: "row" },
-  buttons: { paddingLeft: 10, paddingRight: 10 },
+  buttons: { paddingLeft: 30, paddingRight: 10 },
 });
 
 export default ExecuteButtons;

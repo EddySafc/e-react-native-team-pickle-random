@@ -21,14 +21,14 @@ const TeamDisplay = ({
       <View style={styles.container}>
         <ScrollView style={styles.scrollview}>
           {teamOne.map((player) => (
-            <Text key={player} style={styles.player_text}>
+            <Text key={player.playerKey} style={styles.player_text}>
               {player}
             </Text>
           ))}
           <Text></Text>
           <Text></Text>
           {teamTwo.map((player) => (
-            <Text key={player} style={styles.player_text}>
+            <Text key={player.playerKey} style={styles.player_text}>
               {player}
             </Text>
           ))}
